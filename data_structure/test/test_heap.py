@@ -18,3 +18,12 @@ def test_heap_sort2():
   while len(heap.arr):
     dst.append(heap.heappop())
   assert dst == [1,2,3,4,5]
+
+def test_heap_sort3():
+  test_arr = [5,6,3,2,1,7]
+  heap = Heap()
+  heap.heapify(test_arr)
+  dst = []
+  while len(heap.arr):
+    dst.append(heap.heappop())
+  assert dst == [1,2,3,5,6,7]
